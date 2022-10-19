@@ -17,7 +17,7 @@ export default function Vacations() {
     if (localStorage.vacations === null || localStorage.vacations === undefined) {
       if (update) {
         const res = async () => {
-          await fetch("http://localhost:5000/vacations")
+          await fetch("https://vacation-server-side-production.up.railway.app/vacations")
             .then((res) => res.json())
             .then((data) => {
               setUpdate(false);

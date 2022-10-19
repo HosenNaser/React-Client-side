@@ -18,7 +18,7 @@ export default function Login() {
     setLoading(true);
     setMsg("");
 
-    const res = await fetch("http://localhost:5000/users/login", {
+    const res = await fetch("https://vacation-server-side-production.up.railway.app/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userInfo),

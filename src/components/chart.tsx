@@ -20,7 +20,7 @@ export default function Charts() {
 
   const vacations = async () => {
     if (fetchNow) {
-      await fetch("http://localhost:5000/vacations")
+      await fetch("https://vacation-server-side-production.up.railway.app/vacations")
         .then((res) => res.json())
         .then((result) => {
           let res = result.vacations;

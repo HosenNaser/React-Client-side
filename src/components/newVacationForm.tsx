@@ -25,9 +25,9 @@ export default function NewVac() {
       Image: editVac == null ? image : editVac.Image,
     };
     if (editVac == null) {
-      fetchUrl = "http://localhost:5000/vacations/Add";
+      fetchUrl = "https://vacation-server-side-production.up.railway.app/vacations/Add";
     } else {
-      fetchUrl = `http://localhost:5000/vacations/Edit/${params.id}`;
+      fetchUrl = `https://vacation-server-side-production.up.railway.app/vacations/Edit/${params.id}`;
     }
     const res = await fetch(fetchUrl, {
       method: "POST",
