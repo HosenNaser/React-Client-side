@@ -11,7 +11,7 @@ export default function Card({ vac }: any) {
   };
 
   const removeBtn = async () => {
-    fetch(`https://vacation-server-side-production.up.railway.app/vacations/${vac._id}`, {
+    fetch(`https://vacations-server.onrender.com/vacations/${vac._id}`, {
       method: "delete",
       headers: { "Content-Type": "application/json" },
     })
@@ -23,7 +23,7 @@ export default function Card({ vac }: any) {
   };
 
   const followBtn = async () => {
-    await fetch(`https://vacation-server-side-production.up.railway.app/users/follow/${vac._id}`, {
+    await fetch(`https://vacations-server.onrender.com/users/follow/${vac._id}`, {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id: localStorage.id }),

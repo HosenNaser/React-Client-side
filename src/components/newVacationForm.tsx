@@ -25,9 +25,9 @@ export default function NewVac() {
       Image: editVac == null ? image : editVac.Image,
     };
     if (editVac == null) {
-      fetchUrl = "https://vacation-server-side-production.up.railway.app/vacations/Add";
+      fetchUrl = "https://vacations-server.onrender.com/vacations/Add";
     } else {
-      fetchUrl = `https://vacation-server-side-production.up.railway.app/vacations/Edit/${params.id}`;
+      fetchUrl = `https://vacations-server.onrender.com/vacations/Edit/${params.id}`;
     }
     const res = await fetch(fetchUrl, {
       method: "POST",

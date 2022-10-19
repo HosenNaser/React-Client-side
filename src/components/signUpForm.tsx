@@ -15,7 +15,7 @@ export default function SignUpForm() {
     let user = { first_name, last_name, username, password };
     console.log(user);
 
-    const res = await fetch("https://vacation-server-side-production.up.railway.app/users/signup", {
+    const res = await fetch("https://vacations-server.onrender.com/users/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),

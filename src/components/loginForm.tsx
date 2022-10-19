@@ -18,7 +18,7 @@ export default function Login() {
     setLoading(true);
     setMsg("");
 
-    const res = await fetch("https://vacation-server-side-production.up.railway.app/users/login", {
+    const res = await fetch("https://vacations-server.onrender.com/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(userInfo),
