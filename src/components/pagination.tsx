@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import style from "../style/pagination.module.scss";
 
 export default function Pagination(props: any) {
+  const navigate = useNavigate();
   const currentPage: number = Number.parseInt(props.pagination.currentPage);
   const prev: number = currentPage > 1 ? currentPage - 1 : currentPage;
   const next: number = currentPage < props.pagination.TotalPages ? currentPage + 1 : currentPage;
@@ -13,9 +15,9 @@ export default function Pagination(props: any) {
   ) {
     pagesNum.push(
       <li key={i} className={`${style.current} ${currentPage === i ? style.active : null}`}>
-        <a href={`/Dashboard/${i}`} className={style.link}>
+        <button onClick={() => navigate(`/DashBoard/${i}`)} className={style.link}>
           {i}
-        </a>
+        </button>
       </li>
     );
   }
@@ -23,15 +25,15 @@ export default function Pagination(props: any) {
   return (
     <div className={style.pagination}>
       <li className={`${style.pageItem} ${style.prevPage}  `}>
-        <a href={`/Dashboard/${prev}`} className={style.link}>
+        <button onClick={() => navigate(`/Dashboard/${prev}`)} className={style.link}>
           Prev
-        </a>{" "}
+        </button>{" "}
       </li>
       {pagesNum}
       <li className={`${style.pageItem} ${style.nextPage}`}>
-        <a href={`/Dashboard/${next}`} className={style.link}>
+        <button onClick={() => navigate(`/Dashboard/${next}`)} className={style.link}>
           Next
-        </a>
+        </button>
       </li>
     </div>
   );
