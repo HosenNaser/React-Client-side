@@ -1,0 +1,24 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #486168;
+  color: white;
+  padding: 10px;
+  font-size: 25px;
+  .title {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .nav {
+    button {
+      cursor: pointer;
+      font-size: 22px;
+      padding: 5px;
+      margin: 2px;
+      background-color: inherit;
+      border: 2px solid whitesmoke;
+    }
+  }
+}

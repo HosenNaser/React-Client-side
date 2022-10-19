@@ -1,0 +1,58 @@
+.vacMainBody {
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10px + 1vmin);
+
+  .vacContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 0.2fr));
+    justify-content: center;
+    width: 85%;
+    margin-top: 2%;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #486168;
+      width: 300px;
+      height: 350px;
+      margin: 10px;
+      border-radius: 15px;
+
+      img {
+        align-items: center;
+        width: 90%;
+        height: 170px;
+        border-radius: 15px;
+      }
+    }
+    label {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.Btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  button {
+    min-width: 15%;
+  }
+}
+
+Button {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  background-color: inherit;
+}
+
+.chart {
+  width: 70%;
+  margin: auto;
+}
